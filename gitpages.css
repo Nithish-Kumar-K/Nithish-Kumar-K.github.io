@@ -1,0 +1,56 @@
+@media all{
+  a{
+    color: white;
+  }
+  #first_page{
+    background-image: url("first_page_background.jpg");
+    background-size: cover;
+    text-align: center;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    font-size: 160%;
+
+  }
+  #intro{
+    transform: translate(0,20vh);
+  }
+  #types{
+    font-family:"Georgia", serif;;
+    transform: translate(0,40vh);
+  }
+  #games{
+    text-align: center;
+    color: blue;
+    display: inline-block;
+    font-size: 130%;
+    background-color: grey;
+  }
+  .description{
+    display: inline-block;
+    width: 49.5vw;
+    text-align: center;
+    padding: 2vh,2vw,2vh,2vw;
+    float: left;
+  }
+  .verticalLine {
+    border-left: thick solid #ff0000;
+ }
+  body{
+    font-size: 65%
+    background-color:black;
+  }
+  div{
+    text-align: center;
+    width: 100vw;
+    display: inline-block;
+    float: left;
+  }
+  hr{
+    color: red;
+  }
+  img{
+    width:48.5vw;
+    height:70vh;
+  }
+}
