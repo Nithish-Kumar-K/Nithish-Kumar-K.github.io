@@ -21,10 +21,13 @@
   }
   #games{
     text-align: center;
-    color: blue;
+    color: white;
     display: inline-block;
     font-size: 130%;
     background-color: grey;
+  }
+  #memorygame{
+
   }
   .description{
     display: inline-block;
@@ -33,12 +36,22 @@
     padding: 2vh,2vw,2vh,2vw;
     float: left;
   }
+  /*#memdescription{
+    display: block;
+    float: center;
+    width: 49.5vw;
+    text-align: center;
+    padding: 2vh,2vw,2vh,2vw;
+    transform: translate(35vx,0);
+  }*/
   .verticalLine {
     border-left: thick solid #ff0000;
  }
   body{
     font-size: 65%
-    background-color:black;
+    background-color:grey;
+    margin:0;
+
   }
   div{
     text-align: center;

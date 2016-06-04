@@ -1,5 +1,5 @@
 var t=0;
-var arr=[],cstatus=[],n=0,prevelement=16,cm=0,secs=20,moves=0;
+var arr=[],cstatus=[],n=0,prevelement=16,cm=0,secs=60,moves=0;
 //arr will store the element that is being matched in the array
 //cstatus will be 0 if element is currently closed
 //it is 1 if it is temporarily open
@@ -7,7 +7,8 @@ var arr=[],cstatus=[],n=0,prevelement=16,cm=0,secs=20,moves=0;
 //n is no of boxes currently open and prevelement is the value of the box last
 //opened with appropriate conditions
 
-
+var difficulty=prompt("Please give difficulty level between 1 and 10");
+secs=secs-(difficulty*4);
   for(i=0;i<8;++i){
     arr[i]=arr[i+8]=i+1;
     cstatus[i]=cstatus[i+8]=0;
@@ -64,12 +65,16 @@ function checkelement(i){
 function comparer(i,prevelement){
   if(arr[i]==arr[prevelement]){
     cstatus[i]=cstatus[prevelement]=2;
-    n=0; prevelement=16;
-    cm=cm+1;
+    n=0;     cm=cm+1;
     document.getElementById('correctmoves').innerHTML="CorrectMatches: "+cm;
+    document.getElementById('index'+i).style.backgroundColor="green";
+    document.getElementById('index'+prevelement).style.backgroundColor="green";
+    prevelement=16;
 
-    if(cm==8)
-      alert("You Have Won!");
+    if(cm==8){
+      alert("You Have Won in with "+secs+" seconds left!");
+      location.reload();
+    }
   }
   else{
     cstatus[i]=cstatus[prevelement]=0;

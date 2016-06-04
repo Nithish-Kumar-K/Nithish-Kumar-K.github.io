@@ -1,0 +1,69 @@
+@media all{
+  body{
+
+    margin:0;
+    color: white;
+    /*background-repeat: no-repeat;*/
+    display: block;
+  }
+  h3{
+    color: white;
+    font-size: 160%;
+    text-align: center;
+  }
+  .utilitydiv{
+    display: inline-block;
+    transform: translateX(28vw);
+    color: white;
+    padding-right: 10vw;
+    font-size: 130%;
+    float: left;
+  }
+  #wrapper{
+    background-image: url("memorygame.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+
+  }
+  #maindiv{
+    width: 80vw;
+    transform: translateX(10vw);
+
+  }
+  .subdiv{
+    /*text-align: center;*/
+    border-radius: 2vw;
+    display: inline-block;
+    background-color: grey;
+    color: white;
+    font-size: 110%;
+    float: left;
+    width: 18vw;
+    transform: translate(2vw,2vh);
+    height: 11vh;
+    font-size: 3vw;
+    text-align: center;
+    margin-left: 0.42vw;
+    margin-right: 0.42vw;
+    margin-top: 1vh;
+    border: 0.15vw solid black;
+    padding-top: 5.5vh;
+  }
+  .subdiv:hover{
+    background-color: green;
+  }
+
+  #start{
+
+    transform: translateX(46vw);
+    color: white;
+
+    font-size: 130%;
+    float: left;
+  }
+  #start:hover{
+    color:blue;
+  }
+}
