@@ -25,6 +25,8 @@
     width: 100vw;
     height: 100vh;
     display: block;
+    margin-left: -2vw;
+    margin-top: -4vh;
 
   }
   #maindiv{
@@ -57,7 +59,15 @@
 
   #start{
 
-    transform: translateX(46vw);
+    transform: translateX(37.5vw);
+    color: white;
+
+    font-size: 130%;
+    float: left;
+  }
+  #restart{
+
+    transform: translateX(55vw);
     color: white;
 
     font-size: 130%;

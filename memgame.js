@@ -7,11 +7,15 @@ var arr=[],cstatus=[],n=0,prevelement=16,cm=0,secs=60,moves=0;
 //n is no of boxes currently open and prevelement is the value of the box last
 //opened with appropriate conditions
 
-var difficulty=prompt("Please give difficulty level between 1 and 10");
+var difficulty=prompt("Please give difficulty level between 0 and 10");
 secs=secs-(difficulty*4);
   for(i=0;i<8;++i){
     arr[i]=arr[i+8]=i+1;
     cstatus[i]=cstatus[i+8]=0;
+  }
+  if(difficulty>10 ||difficulty<0){
+    alert("You have given invalid input. Please give valid input");
+    location.reload();
   }
 
   //allocate random locations for the values
@@ -42,6 +46,9 @@ function startfunc(){
     intr=setInterval(timer,1000);
   }
 }
+function restartfunc(){
+  location.reload();
+}
 function checkelement(i){
     if(t==1){
       if(cstatus[i]!=2 && cstatus[i]!=1){
@@ -69,6 +76,11 @@ function comparer(i,prevelement){
     document.getElementById('correctmoves').innerHTML="CorrectMatches: "+cm;
     document.getElementById('index'+i).style.backgroundColor="green";
     document.getElementById('index'+prevelement).style.backgroundColor="green";
+    for(i=0;i<15;++i)
+        if(cstatus[i]==2 )
+          opener(i);//this is to take care of cases where the player
+    //presses the prevelement before closer is called so the opener comes before
+    //closer and there is - instead of the number
     prevelement=16;
 
     if(cm==8){
